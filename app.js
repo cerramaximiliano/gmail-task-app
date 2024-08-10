@@ -6,7 +6,6 @@ const taskScheduler = require('./tasks/taskScheduler');
 
 dotenv.config();
 connectDB();
-
 const app = express();
 
 app.use('/api', emailRoutes);
