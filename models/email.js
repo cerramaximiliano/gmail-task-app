@@ -6,6 +6,7 @@ const emailSchema = new mongoose.Schema({
   body: String,
   attachments: Array,
   receivedAt: Date,
+  historyId: String, // Agrega el campo historyId para almacenar el ID de historial de Gmail
 });
 
 module.exports = mongoose.model('Email', emailSchema);
