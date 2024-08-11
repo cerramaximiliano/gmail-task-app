@@ -1,10 +1,10 @@
-const { getEmails } = require('../services/gmailService');
-const Email = require('../models/email');
+const { getEmails } = require("../services/gmailService");
+const Email = require("../models/email");
 
-const fetchEmails = async (req, res) => {
+const fetchEmails = async () => {
   await getEmails();
   const emails = await Email.find({});
-  res.json(emails);
+  return emails;
 };
 
 module.exports = { fetchEmails };

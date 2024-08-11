@@ -7,7 +7,7 @@ const getEmails = async () => {
 
   const gmail = google.gmail({ version: 'v1', auth });
   const res = await gmail.users.messages.list({ userId: 'me' });
-
+  console.log(res.data)
   const emails = [];
   for (let msg of res.data.messages) {
     const message = await gmail.users.messages.get({ userId: 'me', id: msg.id });
