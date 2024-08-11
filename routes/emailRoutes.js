@@ -5,4 +5,5 @@ const router = express.Router();
 
 router.get('/emails', fetchEmails);
 
+
 module.exports = router;
